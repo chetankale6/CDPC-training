@@ -1,0 +1,63 @@
+PYTHON BASIC PROGRAMS (HACKERRANK)
+
+----------------------------------
+Q1. Say "Hello, World!" With Python
+----------------------------------
+
+print("Hello, World!")
+
+
+
+----------------------------------
+Q2. Python If-Else
+----------------------------------
+
+n = int(input())
+
+if n % 2 != 0:
+    print("Weird")
+
+elif n >= 2 and n <= 5:
+    print("Not Weird")
+
+elif n >= 6 and n <= 20:
+    print("Weird")
+
+else:
+    print("Not Weird")
+
+
+
+----------------------------------
+Q3. Arithmetic Operators
+----------------------------------
+
+a = int(input())
+b = int(input())
+
+print(a + b)
+print(a - b)
+print(a * b)
+
+
+
+----------------------------------
+Q4. Python Division
+----------------------------------
+
+a = int(input())
+b = int(input())
+
+print(a // b)
+print(a / b)
+
+
+
+----------------------------------
+Q5. Loops
+----------------------------------
+
+n = int(input())
+
+for i in range(n):
+    print(i ** 2)
