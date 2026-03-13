@@ -1,0 +1,179 @@
+PYTHON PRACTICE PROGRAMS (HACKERRANK AND BASIC)
+
+------------------------------------------------
+1. Solve Me First
+------------------------------------------------
+
+Link:
+https://www.hackerrank.com/challenges/solve-me-first/problem
+
+Program to add two numbers.
+
+def solveMeFirst(a, b):
+    return a + b
+
+num1 = int(input())
+num2 = int(input())
+
+res = solveMeFirst(num1, num2)
+print(res)
+
+Example
+
+Input
+2
+3
+
+Output
+5
+
+
+------------------------------------------------
+2. Simple Array Sum
+------------------------------------------------
+
+Link:
+https://www.hackerrank.com/challenges/simple-array-sum/problem
+
+Program to find the sum of all elements in an array.
+
+def simpleArraySum(ar):
+    return sum(ar)
+
+ar_count = int(input())
+ar = list(map(int, input().split()))
+
+result = simpleArraySum(ar)
+print(result)
+
+
+------------------------------------------------
+3. Find Maximum and Minimum in a List
+------------------------------------------------
+
+Program to find the largest and smallest number in a list.
+
+def maxmin(ar):
+    largest = ar[0]
+    smallest = ar[0]
+
+    for i in ar:
+        if i > largest:
+            largest = i
+        if i < smallest:
+            smallest = i
+
+    print("Largest:", largest)
+    print("Smallest:", smallest)
+
+
+n = int(input("Enter range: "))
+ar = []
+
+for i in range(n):
+    num = int(input("Enter number: "))
+    ar.append(num)
+
+maxmin(ar)
+
+
+------------------------------------------------
+4. Different Ways of Taking Input in Python
+------------------------------------------------
+
+1. Single value input
+n = int(input())
+
+2. Two values separately
+a = int(input())
+b = int(input())
+
+3. Multiple values in one line
+a, b = map(int, input().split())
+
+4. List input
+ls = list(map(int, input().split()))
+
+5. Using eval
+arr = eval(input())
+
+
+------------------------------------------------
+5. Remove Duplicate Elements from a List
+------------------------------------------------
+
+def remove(ar):
+    ls = []
+    for i in ar:
+        if i not in ls:
+            ls.append(i)
+    return ls
+
+n = int(input("Enter range: "))
+ar = []
+
+for i in range(n):
+    num = int(input("Enter number: "))
+    ar.append(num)
+
+print(remove(ar))
+
+
+------------------------------------------------
+6. Pattern Using While Loop
+------------------------------------------------
+
+i = 1
+j = 10
+
+while i < j:
+
+    if i == 3 and j == 8:
+        i = i + 1
+        j = j - 1
+        continue
+
+    print(i, "\t", j)
+
+    i = i + 1
+    j = j - 1
+
+Output
+
+1    10
+2     9
+4     7
+5     6
+
+
+------------------------------------------------
+7. Alternate Positive and Negative Numbers
+------------------------------------------------
+
+arr = [1, -2, 3, -4, -1, 4]
+
+pos = []
+neg = []
+
+# separate positive and negative numbers
+for i in arr:
+    if i >= 0:
+        pos.append(i)
+    else:
+        neg.append(i)
+
+result = []
+i = j = 0
+
+# arrange alternately
+while i < len(pos) and j < len(neg):
+    result.append(pos[i])
+    result.append(neg[j])
+    i += 1
+    j += 1
+
+# add remaining elements
+result.extend(pos[i:])
+result.extend(neg[j:])
+
+print(result)
