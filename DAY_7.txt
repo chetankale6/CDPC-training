@@ -1,0 +1,122 @@
+PYTHON PRACTICE PROBLEMS (HACKEREARTH)
+--------------------------------------
+
+
+------------------------------------------------
+1. Roy and Profile Picture
+------------------------------------------------
+
+Link:
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/roy-and-profile-picture/
+
+Program to check whether an image is acceptable or needs modification.
+
+L = int(input())
+N = int(input())
+
+for i in range(N):
+    W, H = map(int, input().split())
+
+    if W < L or H < L:
+        print("UPLOAD ANOTHER")
+    elif W == H:
+        print("ACCEPTED")
+    else:
+        print("CROP IT")
+
+
+Example
+
+Input
+180
+3
+640 480
+120 300
+180 180
+
+Output
+CROP IT
+UPLOAD ANOTHER
+ACCEPTED
+
+
+------------------------------------------------
+2. Monk and Rotation
+------------------------------------------------
+
+Link:
+https://www.hackerearth.com/problem/algorithm/monk-and-rotation-3-bcf1aefe/
+
+Program to rotate array to the right by K positions.
+
+T = int(input())
+
+for i in range(T):
+    N, K = map(int, input().split())
+    ar = list(map(int, input().split()))
+
+    K = K % N
+    new = ar[-K:] + ar[:-K]
+
+    print(*new)
+
+
+Example
+
+Input
+1
+5 2
+1 2 3 4 5
+
+Output
+4 5 1 2 3
+
+
+------------------------------------------------
+3. Modify the String
+------------------------------------------------
+
+Link:
+https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/modify-the-string/
+
+Program to toggle the case of each character.
+
+s = input()
+result = ""
+
+for ch in s:
+    if 'A' <= ch <= 'Z':
+        result += chr(ord(ch) + 32)
+    elif 'a' <= ch <= 'z':
+        result += chr(ord(ch) - 32)
+    else:
+        result += ch
+
+print(result)
+
+
+Example
+
+Input
+abcdE
+
+Output
+ABCDe
+
+
+------------------------------------------------
+4. Majority Element in Array
+------------------------------------------------
+
+Program to find element occurring more than n/2 times.
+
+ar = list(map(int, input().split()))
+
+major = None
+
+for i in ar:
+    if ar.count(i) > len(ar) // 2:
+        major = i
+        break
+
+print(major)
